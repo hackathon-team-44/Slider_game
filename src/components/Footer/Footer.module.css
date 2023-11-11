@@ -10,6 +10,7 @@
 .link {
   text-decoration: none;
   color: rgb(121, 119, 119);
+  font-size: 14px;
 }
 
 .list {
@@ -21,4 +22,5 @@
 .item {
   color: rgb(121, 119, 119);
   margin: 0 5px;
+  font-size: 12px;
 }
