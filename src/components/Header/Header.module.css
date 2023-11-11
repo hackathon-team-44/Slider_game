@@ -1,0 +1,9 @@
+.header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: rgb(45, 72, 99);
+}
