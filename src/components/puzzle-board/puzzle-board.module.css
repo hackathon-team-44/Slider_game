@@ -1,0 +1,7 @@
+.puzzleBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    width: 657px;
+    height: 657px;
+}
