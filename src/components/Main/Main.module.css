@@ -1,0 +1,15 @@
+.main {
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  height: 350px;
+  width: 350px;
+  box-sizing: content-box;
+  background-image: url(/src/images/Снимок.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px;
+}
