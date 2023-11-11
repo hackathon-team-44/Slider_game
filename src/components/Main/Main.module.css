@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  height: 350px;
+  width: 350px;
+  box-sizing: border-box;
+  background-image: url(/src/images/Снимок.png);
+  background-size: 350px;
+}
