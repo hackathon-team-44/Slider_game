@@ -1,4 +1,4 @@
-.popup {
+.endGamePopup {
   display: none;
   position: fixed;
   top: 0;
@@ -18,12 +18,13 @@
   padding: 20px;
   background-color: #fff;
   text-align: center;
+  border-radius: 15px;
 }
 
-#openPopupButton {
+#endGameButton {
   margin-top: 20px;
 }
 
-#closePopupButton {
+#closeEndGamePopupButton {
   margin-top: 20px;
 }
