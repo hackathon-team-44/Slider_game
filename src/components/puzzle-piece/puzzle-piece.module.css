@@ -2,4 +2,71 @@
     width: 164.25px;
     height: 164.25px;
     background-size: 657px 657px;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.arrowUp,
+.arrowDown,
+.arrowLeft,
+.arrowRight {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 20px;
+}
+
+.arrowDown {
+    border-bottom-color: white;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    animation: arrow-move-vertical 2s infinite;
+}
+
+.arrowUp {
+    border-top-color: white;
+    left: 50%;
+    top: calc(100% + 10px);
+    animation: arrow-move-vertical 2s infinite;
+}
+
+.arrowRight {
+    border-right-color: white;
+    top: 50%;
+    right: calc(100% + 10px);
+    animation: arrow-move-horizontal 2s infinite;
+}
+
+.arrowLeft {
+    border-left-color: white;
+    top: 50%;
+    left: calc(100% + 10px);
+    animation: arrow-move-horizontal 2s infinite;
+}
+
+@keyframes arrow-move-vertical {
+
+    0%,
+    100% {
+        transform: translateX(-50%);
+    }
+
+}
+
+@keyframes arrow-move-horizontal {
+
+    0%,
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.arrow:hover {
+    opacity: 1;
 }
