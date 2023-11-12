@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: rgb(45, 72, 99);
+  font-size: 33px;
+  line-height: 40px;
+}

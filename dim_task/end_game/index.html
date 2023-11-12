@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/end_game.css">
+</head>
+<body>
+    <button id="endGameButton">Завершить игру</button>
+        <div id="endGamePopup" class="popup">
+        <div class="popup-content">
+            <h2>Игра завершена</h2>
+            <p>Спасибо за участие!</p>
+            <button id="closeEndGamePopupButton">Закрыть</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("endGameButton").addEventListener("click", function() {
+        document.getElementById("endGamePopup").style.display = "block";});
+        document.getElementById("closeEndGamePopupButton").addEventListener("click", function() {
+        document.getElementById("endGamePopup").style.display = "none";});
+    </script>
+</body>
+</html>
