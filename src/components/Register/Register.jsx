@@ -30,7 +30,7 @@ function Register() {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-      <Form.Item
+      <Form.Item className={style.input}
         label="Имя"
         name="username"
         rules={[
@@ -43,7 +43,7 @@ function Register() {
         <Input />
       </Form.Item>
 
-      <Form.Item
+      <Form.Item className={style.input}
         label="Пароль"
         name="password"
         rules={[
