@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import appStyles from './App.module.css'
 import HeaderContent from './components/header-content/header-content'
 import PuzzleBoard from './components/puzzle-board/puzzle-board'
+=======
+import { Route, Routes } from "react-router-dom";
+>>>>>>> b107efe8434b2042474dd54aac13764bb6810863
 import EndOfGame from "./components/EndOfGame/EndOfGame";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import NavBar from "./components/NavBar/NavBar";
 import Rules from "./components/Rules/Rules";
+import Register from "./components/Register/Register";
+import NF from "./components/NF/NF";
 
 import { Layout, Space } from 'antd';
 
@@ -14,6 +20,7 @@ function App() {
   const { Header, Footer, Content } = Layout;
 
   return (
+<<<<<<< HEAD
     <>
       {/* <Header />
       <NavBar />
@@ -48,6 +55,33 @@ function App() {
         </Layout>
       </Space>
     </>
+=======
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Header />
+            <NavBar />
+            <Main />
+            <Rules />
+            <EndOfGame />
+            <Footer />
+          </>
+        }
+      />
+      <Route path="/signup" element={<Register ></Register>} />
+      <Route path="/signin" element={<Register ></Register>} />
+      <Route
+        path="/*"
+        element={
+          <>
+            <NF />
+          </>
+        }
+      />
+    </Routes>
+>>>>>>> b107efe8434b2042474dd54aac13764bb6810863
   );
 }
 
