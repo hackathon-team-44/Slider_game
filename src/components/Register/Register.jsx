@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { Button, Form, Input } from "antd";
+import style from "./Register.module.css";
+
 const onFinish = (values) => {
   console.log("Success:", values);
 };
@@ -10,7 +12,7 @@ const onFinishFailed = (errorInfo) => {
 function Register() {
   const location = useLocation();
   return (
-    <Form
+    <Form className={style.register}
       name="basic"
       labelCol={{
         span: 8,
