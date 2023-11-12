@@ -2,10 +2,6 @@ import style from "./NavBar.module.css";
 import { useState } from "react";
 import { Menu } from "antd";
 const items = [
-  // {
-  //   label: '?',
-  //   key: 'mail',
-  // },
   {
     label: "Рейтинг игроков",
     key: "NavBar",
