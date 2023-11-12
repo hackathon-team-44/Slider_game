@@ -1,69 +1,51 @@
-import style from "./NavBar.module.css"
-import { useState } from 'react';
-import { Menu } from 'antd';
+import style from "./NavBar.module.css";
+import { useState } from "react";
+import { Menu } from "antd";
 const items = [
   // {
   //   label: '?',
   //   key: 'mail',
   // },
   {
-    label: 'Рейтинг игроков',
-    key: 'NavBar',
+    label: "Рейтинг игроков",
+    key: "NavBar",
   },
   {
-    label: 'Личный кабинет',
-    key: 'lk',
+    label: "Личный кабинет",
+    key: "lk",
     children: [
       {
-        type: 'group',
-        label: 'Item 1',
-        children: [
-          {
-            label: 'Option 1',
-            key: 'setting:1',
-          },
-          {
-            label: 'Option 2',
-            key: 'setting:2',
-          },
-        ],
+        label: "Вход",
+        key: "setting:1",
       },
       {
-        type: 'group',
-        label: 'Item 2',
-        children: [
-          {
-            label: 'Option 3',
-            key: 'setting:3',
-          },
-          {
-            label: 'Option 4',
-            key: 'setting:4',
-          },
-        ],
+        label: "Регистрация",
+        key: "setting:2",
       },
     ],
   },
   {
-    label: 'Выбрать картинку',
-    key: 'SubMenu',
+    label: "Выбрать картинку",
+    key: "SubMenu",
     children: [
       {
-        type: 'group',
+        type: "group",
         children: [
           {
-            label: 'Магия',
-            key: 'setting:5',
+            label: "Магия",
+            key: "setting:5",
           },
           {
-            label: 'Герои',
-            key: 'setting:6',
-          },{
-            label: 'Нежность',
-            key: 'setting:7',
-          },{
-            label: 'Загрузить свою',
-            key: 'setting:8',
+            label: "Герои",
+            key: "setting:6",
+          },
+          {
+            label: "Нежность",
+            key: "setting:7",
+          },
+          {
+            label: "Загрузить свою",
+            key: "setting:8",
           },
         ],
       },
@@ -79,10 +61,18 @@ const items = [
   // },
 ];
 const NavBar = () => {
-  const [current, setCurrent] = useState('mail');
+  const [current, setCurrent] = useState("mail");
   const onClick = (e) => {
     setCurrent(e.key);
   };
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} className={style.navbar} />;
+  return (
+    <Menu
+      onClick={onClick}
+      selectedKeys={[current]}
+      mode="horizontal"
+      items={items}
+      className={style.navbar}
+    />
+  );
 };
 export default NavBar;
