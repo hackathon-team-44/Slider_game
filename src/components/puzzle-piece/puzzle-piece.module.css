@@ -1,7 +1,7 @@
 .puzzlePiece {
     width: 164.25px;
     height: 164.25px;
-    background-size: 657px 657px;
+    background-size: 574px 574px;
     position: relative;
 }
 
@@ -23,28 +23,28 @@
 }
 
 .arrowDown {
-    border-bottom-color: white;
+    border-bottom-color: #fa8c16;
     left: 50%;
     bottom: calc(100% + 10px);
     animation: arrow-move-vertical 2s infinite;
 }
 
 .arrowUp {
-    border-top-color: white;
+    border-top-color: #fa8c16;
     left: 50%;
     top: calc(100% + 10px);
     animation: arrow-move-vertical 2s infinite;
 }
 
 .arrowRight {
-    border-right-color: white;
+    border-right-color: #fa8c16;
     top: 50%;
     right: calc(100% + 10px);
     animation: arrow-move-horizontal 2s infinite;
 }
 
 .arrowLeft {
-    border-left-color: white;
+    border-left-color: #fa8c16;
     top: 50%;
     left: calc(100% + 10px);
     animation: arrow-move-horizontal 2s infinite;

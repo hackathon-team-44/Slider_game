@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
-    width: 657px;
-    height: 657px;
+    width: 574px;
+    height: 574px;
 }
 
 .container {
@@ -13,4 +13,17 @@
 
 .btn {
     margin-top: 30px;
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rules {
+margin-top: 27px;
 }

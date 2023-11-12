@@ -17,7 +17,7 @@ export default function Rules() {
 
   return (
     <>
-      <Button type='primary' onClick={showModal}>Открыть правила</Button>
+      <Button onClick={showModal}>Открыть правила</Button>
       <Modal title="Правила игры" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <p>Нужно собрать «кусочки», в одно целое изображение.</p>
         <p>Пустующее окошко лишь одно.</p>

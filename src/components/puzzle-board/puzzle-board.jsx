@@ -2,17 +2,19 @@ import { useState, useEffect } from 'react';
 import PuzzlePiece from '../puzzle-piece/puzzle-piece';
 import boardStyles from './puzzle-board.module.css';
 import { Button, Modal } from 'antd';
+import Rules from '../Rules/Rules';
 
 const PuzzleBoard = () => {
   const [tiles, setTiles] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const imageSize = 657;
+  const imageSize = 574;
   const gridSize = 4;
 
   useEffect(() => {
     setTiles(generateRandomBoard());
   }, []);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -88,7 +90,6 @@ const PuzzleBoard = () => {
     const winningTiles = Array.from({ length: gridSize * gridSize - 1 }, (_, i) => i + 1);
     winningTiles.push(null);
     setTiles(winningTiles);
-    showModal();
   };
 
   const moveTile = (tileIndex, direction) => {
@@ -131,27 +132,33 @@ const PuzzleBoard = () => {
       setTiles(newTiles);
 
       if (isGameWon(newTiles)) {
-        console.log("Поздравляем! Вы выиграли."); //TODO: вывести модалку
+        showModal();
       }
     }
   };
 
   return (
-    <div className={boardStyles.container}>
-      <div className={boardStyles.puzzleBoard}>
-        {tiles.map((tile, index) => (
-          tile !== null ?
-            <PuzzlePiece key={index} value={tile} imageSize={imageSize} gridSize={gridSize}
-              movableDirections={getMovableDirections(index)}
-              onMove={(direction) => moveTile(index, direction)} /> :
-            <div key={index} className={`${boardStyles.puzzlePiece} ${boardStyles.empty}`}></div>
-        ))}
+    <>
+      <div className={boardStyles.container}>
+        <div className={boardStyles.puzzleBoard}>
+          {tiles.map((tile, index) => (
+            tile !== null ?
+              <PuzzlePiece key={index} value={tile} imageSize={imageSize} gridSize={gridSize}
+                movableDirections={getMovableDirections(index)}
+                onMove={(direction) => moveTile(index, direction)} /> :
+              <div key={index} className={`${boardStyles.puzzlePiece} ${boardStyles.empty}`}></div>
+          ))}
+        </div>
+        <div className={boardStyles.btns}>
+          <Button className={boardStyles.btn} onClick={setWinningState}>Показать решение</Button>
+          <Button className={boardStyles.btn} onClick={() => setTiles(generateRandomBoard())}>Начать заново</Button>
+          <div className={boardStyles.rules}><Rules></Rules></div>
+        </div>
       </div>
-      <Button className={boardStyles.btn} onClick={setWinningState}>Показать решение</Button>
-      <Modal title="Успех" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="Успех!" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <p>Вы выиграли!</p>
       </Modal>
-    </div>
+    </>
   );
 };
 
